@@ -5,9 +5,12 @@ import lebenslaufController from  './lebenslauf'
 import stylesController from './styles'
 import contactController from './contact-save'
 import contactStartController from './contact'
+import apiRoutes from './api'
 
 const server = express()
 server.use(bodyParser.urlencoded({extended: true}))
+
+  server.use('/Produkte', apiRoutes)
 
   server.get('/', indexController)
 
